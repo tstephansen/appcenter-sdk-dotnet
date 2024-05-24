@@ -65,7 +65,7 @@ namespace Microsoft.AppCenter.Ingestion.Http
             var requestContent = CreateLogsContent(logs);
             AppCenterLog.Verbose(AppCenterLog.LogTag, requestContent);
             // Send request.
-            return await _httpNetwork.SendAsync("https://localhost:54478/api/Errors/Log", "POST", requestContent, token).ConfigureAwait(false);
+            return await _httpNetwork.SendAsync("http://localhost:8080/Log", "POST", requestContent, token).ConfigureAwait(false);
         }
 
         public void Close()

@@ -223,7 +223,7 @@ public class AppCenterService : IAppCenterService
         return device;
     }
 
-    internal ExceptionDetail CreateExceptionDetails(ExceptionDetailModel model, ExceptionDetail? ex = null, ManagedErrorLog? managedError = null)
+    internal static ExceptionDetail CreateExceptionDetails(ExceptionDetailModel model, ExceptionDetail? ex = null)
     {
         if (model.Message.Length > 255)
             model.Message = model.Message[..254];
@@ -235,8 +235,6 @@ public class AppCenterService : IAppCenterService
             StackTrace = model.StackTrace,
             ParentExceptionId = ex?.Id
         };
-        if (managedError != null)
-            detail.ManagedErrorLogs.Add(managedError);
         if (model.InnerExceptions is not { Count: > 0 })
             return detail;
         foreach (var inner in model.InnerExceptions)
