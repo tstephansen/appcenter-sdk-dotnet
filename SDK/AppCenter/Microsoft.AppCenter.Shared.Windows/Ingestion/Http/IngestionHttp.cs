@@ -36,7 +36,7 @@ namespace Microsoft.AppCenter.Ingestion.Http
                 call.SetException(new NetworkIngestionException(new Exception("SDK is in offline mode.")));
                 return call;
             }
-            CallAsync(appSecret, installId, logs, call.CancellationToken).ContinueWith(task =>
+            CallAsync(logs, call.CancellationToken).ContinueWith(task =>
             {
                 // Cancellation token is already shared.
                 if (task.IsCanceled)
@@ -58,24 +58,14 @@ namespace Microsoft.AppCenter.Ingestion.Http
         }
 
         /// <exception cref="IngestionException"/>
-        private async Task<string> CallAsync(string appSecret, Guid installId, IList<Log> logs, CancellationToken token)
+        private async Task<string> CallAsync(IList<Log> logs, CancellationToken token)
         {
             token.ThrowIfCancellationRequested();
-            var baseUrl = string.IsNullOrEmpty(_baseLogUrl) ? DefaultBaseUrl : _baseLogUrl;
-            AppCenterLog.Verbose(AppCenterLog.LogTag, $"Calling {baseUrl + ApiVersion}...");
-
-            // Create request headers.
-            var requestHeaders = CreateHeaders(appSecret, installId);
-            AppCenterLog.Verbose(AppCenterLog.LogTag, "Headers: " +
-                    $"{AppSecret}={GetRedactedAppSecret(appSecret)}, " +
-                    $"{InstallId}={installId}");
-
             // Create request content.
             var requestContent = CreateLogsContent(logs);
             AppCenterLog.Verbose(AppCenterLog.LogTag, requestContent);
-
             // Send request.
-            return await _httpNetwork.SendAsync(baseUrl + ApiVersion, "POST", requestHeaders, requestContent, token).ConfigureAwait(false);
+            return await _httpNetwork.SendAsync("https://localhost:54478/api/Errors/Log", "POST", requestContent, token).ConfigureAwait(false);
         }
 
         public void Close()

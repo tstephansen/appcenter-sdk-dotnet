@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDK", "SDK", "{A81BC1E8-BC55-42AE-9B4F-6BFABE20873A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppCenter", "AppCenter", "{30E536B2-DA3A-4294-AC84-8DD6F28DC35B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AppCenter", "SDK\AppCenter\Microsoft.AppCenter\Microsoft.AppCenter.csproj", "{597FC2F6-E919-4B4C-9F41-D77186B44118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AppCenter.WindowsDesktop", "SDK\AppCenter\Microsoft.AppCenter.WindowsDesktop\Microsoft.AppCenter.WindowsDesktop.csproj", "{265E5168-2CF7-4019-9899-3C5D8C4CE258}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppCenterAnalytics", "AppCenterAnalytics", "{B28E716F-42D9-4EB0-AD98-83A2AD291C54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AppCenter.Analytics", "SDK\AppCenterAnalytics\Microsoft.AppCenter.Analytics\Microsoft.AppCenter.Analytics.csproj", "{742B4954-1AB7-42F4-8477-3736ECDD24C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AppCenter.Analytics.WindowsDesktop", "SDK\AppCenterAnalytics\Microsoft.AppCenter.Analytics.WindowsDesktop\Microsoft.AppCenter.Analytics.WindowsDesktop.csproj", "{BA4E6D42-0AC6-4845-9476-5958CD549DAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppCenterCrashes", "AppCenterCrashes", "{B7EA5CAD-7A91-4FC0-9F0C-74EF6ED468B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AppCenter.Crashes", "SDK\AppCenterCrashes\Microsoft.AppCenter.Crashes\Microsoft.AppCenter.Crashes.csproj", "{A48CF9EE-E68F-49DD-BCE4-B0B3196222B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AppCenter.Crashes.WindowsDesktop", "SDK\AppCenterCrashes\Microsoft.AppCenter.Crashes.WindowsDesktop\Microsoft.AppCenter.Crashes.WindowsDesktop.csproj", "{DA5D8004-6AAC-4AED-89DA-92202A8B4AF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{597FC2F6-E919-4B4C-9F41-D77186B44118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{597FC2F6-E919-4B4C-9F41-D77186B44118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{597FC2F6-E919-4B4C-9F41-D77186B44118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{597FC2F6-E919-4B4C-9F41-D77186B44118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{265E5168-2CF7-4019-9899-3C5D8C4CE258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265E5168-2CF7-4019-9899-3C5D8C4CE258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265E5168-2CF7-4019-9899-3C5D8C4CE258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265E5168-2CF7-4019-9899-3C5D8C4CE258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{742B4954-1AB7-42F4-8477-3736ECDD24C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742B4954-1AB7-42F4-8477-3736ECDD24C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742B4954-1AB7-42F4-8477-3736ECDD24C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742B4954-1AB7-42F4-8477-3736ECDD24C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA4E6D42-0AC6-4845-9476-5958CD549DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA4E6D42-0AC6-4845-9476-5958CD549DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA4E6D42-0AC6-4845-9476-5958CD549DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA4E6D42-0AC6-4845-9476-5958CD549DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48CF9EE-E68F-49DD-BCE4-B0B3196222B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48CF9EE-E68F-49DD-BCE4-B0B3196222B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48CF9EE-E68F-49DD-BCE4-B0B3196222B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48CF9EE-E68F-49DD-BCE4-B0B3196222B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA5D8004-6AAC-4AED-89DA-92202A8B4AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA5D8004-6AAC-4AED-89DA-92202A8B4AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA5D8004-6AAC-4AED-89DA-92202A8B4AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA5D8004-6AAC-4AED-89DA-92202A8B4AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30E536B2-DA3A-4294-AC84-8DD6F28DC35B} = {A81BC1E8-BC55-42AE-9B4F-6BFABE20873A}
+		{597FC2F6-E919-4B4C-9F41-D77186B44118} = {30E536B2-DA3A-4294-AC84-8DD6F28DC35B}
+		{265E5168-2CF7-4019-9899-3C5D8C4CE258} = {30E536B2-DA3A-4294-AC84-8DD6F28DC35B}
+		{B28E716F-42D9-4EB0-AD98-83A2AD291C54} = {A81BC1E8-BC55-42AE-9B4F-6BFABE20873A}
+		{742B4954-1AB7-42F4-8477-3736ECDD24C7} = {B28E716F-42D9-4EB0-AD98-83A2AD291C54}
+		{BA4E6D42-0AC6-4845-9476-5958CD549DAE} = {B28E716F-42D9-4EB0-AD98-83A2AD291C54}
+		{B7EA5CAD-7A91-4FC0-9F0C-74EF6ED468B0} = {A81BC1E8-BC55-42AE-9B4F-6BFABE20873A}
+		{A48CF9EE-E68F-49DD-BCE4-B0B3196222B7} = {B7EA5CAD-7A91-4FC0-9F0C-74EF6ED468B0}
+		{DA5D8004-6AAC-4AED-89DA-92202A8B4AF8} = {B7EA5CAD-7A91-4FC0-9F0C-74EF6ED468B0}
+	EndGlobalSection
+EndGlobal

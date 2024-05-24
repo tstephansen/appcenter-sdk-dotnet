@@ -58,6 +58,18 @@ namespace Microsoft.AppCenter.Ingestion.Http
         public async Task<string> SendAsync(string uri, string method, IDictionary<string, string> headers, string jsonContent, CancellationToken cancellationToken)
         {
             using (var request = CreateRequest(uri, method, headers, jsonContent))
+            return await SendRequestAsync(request, cancellationToken);
+        }
+
+        /// <exception cref="IngestionException"/>
+        public async Task<string> SendAsync(string uri, string method, string jsonContent, CancellationToken cancellationToken)
+        {
+            using (var request = CreateRequest(uri, method, jsonContent))
+            return await SendRequestAsync(request, cancellationToken);
+        }
+
+        internal string SendRequestAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
             using (var response = await SendRequestAsync(request, cancellationToken).ConfigureAwait(false))
             {
                 if (response == null)

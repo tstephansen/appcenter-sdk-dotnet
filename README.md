@@ -44,3 +44,24 @@ App Center SDK support is provided directly within the App Center portal. Any ti
 ### 3.2 Twitter
 
 We're on Twitter as [@vsappcenter](https://www.twitter.com/vsappcenter).
+
+# Changes from official AppCenter repository
+
+## 1. Changed the Windows Desktop ingestion to point towards a custom API.
+
+The following files were modified:
+- SDK\AppCenter\Microsoft.AppCenter.Shared.Windows\Ingestion\Http\IngestionHttp.cs
+- SDK\AppCenter\Microsoft.AppCenter.Shared.Windows\Ingestion\Http\IHttpNetworkAdapter.cs
+- SDK\AppCenter\Microsoft.AppCenter.Shared.Windows\Ingestion\Http\HttpNetworkAdapter.cs
+
+To use the custom API, change the url on line 68 of IngestionHttp.cs to wherever you deploy the API. Then build the CustomAppCenter solution and add a reference to the built dlls in your project.
+
+## 2. Added a custom API to receive AppCenter data.
+
+Added an ASP.NET 8 Web API to handle logs and errors that are sent from the custom AppCenter build.
+
+## 3. Running the API in Docker
+
+To run the API in Docker do the following:
+- docker build -f AppCenterApi/Dockerfile -t appcenterapi .
+- docker compose up

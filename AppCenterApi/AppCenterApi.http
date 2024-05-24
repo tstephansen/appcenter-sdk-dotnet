@@ -1,0 +1,33 @@
+@AppCenterApi_HostAddress = http://localhost:5293
+
+GET {{AppCenterApi_HostAddress}}/weatherforecast/
+Accept: application/json
+###
+
+POST {{AppCenterApi_HostAddress}}/Log
+Accept: application/json
+{
+    "logs": [
+        {
+            "timestamp": "2024-05-23T22:49:10.0213495Z",
+            "sid": "e51567bb-a2e3-48a3-98be-2f116e4567df",
+            "device": {
+                "sdkName": "appcenter.wpf.netcore",
+                "sdkVersion": "5.0.4-SNAPSHOT",
+                "model": "XPS 8950",
+                "oemName": "Dell Inc.",
+                "osName": "WINDOWS",
+                "osVersion": "10.0.22631",
+                "osBuild": "10.0.22631.3593",
+                "locale": "en-US",
+                "timeZoneOffset": -300,
+                "screenSize": "3456x2158",
+                "appVersion": "1.0.0",
+                "appBuild": "1.0.0.0",
+                "appNamespace": "WpfAnalyticsApp"
+            },
+            "type": "startSession"
+        }
+    ]
+}
+###

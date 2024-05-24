@@ -11,5 +11,6 @@ namespace Microsoft.AppCenter.Ingestion.Http
     public interface IHttpNetworkAdapter : IDisposable
     {
         Task<string> SendAsync(string uri, string method, IDictionary<string, string> headers, string jsonContent, CancellationToken cancellationToken);
+        Task<string> SendAsync(string uri, string method, string jsonContent, CancellationToken cancellationToken);
     }
 }
